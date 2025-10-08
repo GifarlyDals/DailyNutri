@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Daily Nutri — Water Tracking (Animated)</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg1:#e6f7ff;
+      --bg2:#ffffff;
+      --blue:#2196F3;        /* warna air (biru) */
+      --green:#22c55e;       /* warna teks hijau diminta */
+      --accent:#FF9800;
+      --glass:#f3fbff;
+      --muted:#64748b;
+      --card-shadow: 0 18px 40px rgba(8,20,40,0.06);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Poppins',system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(135deg,var(--bg1),var(--bg2));
+      color:var(--green); /* semua font hijau */
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:22px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+    }
+
+    /* Card container */
+    .card {
+      width: 1000px;
+      max-width: calc(100% - 44px);
+      background: linear-gradient(180deg,#ffffff,#fbfeff);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--card-shadow);
+      display:grid;
+      grid-template-columns: 380px 1fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    /* LEFT COLUMN */
+    .left{display:flex;flex-direction:column;gap:18px}
+    .header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .title{font-size:20px;font-weight:700}
+    .sub{color:var(--muted);font-size:13px}
+    .glass-wrap{display:flex;align-items:center;justify-content:center;padding:6px;background:linear-gradient(180deg,#f7fcff,#ffffff);border-radius:14px}
+    .glass{width:260px;height:420px;position:relative;outline:none}
+
+    /* SVG clip area measured roughly for transforms */
+    .info{text-align:center}
+    .big{font-size:26px;font-weight:700}
+    .muted{color:var(--muted);font-size:14px}
+
+    .controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .btn{padding:10px 14px;border-radius:12px;border:none;cursor:pointer;font-weight:700}
+    .btn.small{padding:8px 12px;border-radius:10px}
+    .btn.orange{background:var(--accent);color:white;box-shadow:0 8px 18px rgba(255,152,0,0.18)}
+    .btn.green{background:var(--green);color:white;box-shadow:0 8px 18px rgba(34,197,94,0.12)}
+    .btn.gray{background:#9ca3af;color:white}
+
+    .target-row{display:flex;gap:8px;align-items:center;justify-content:center;margin-top:8px}
+    .target-row input{width:110px;padding:8px;border-radius:10px;border:1px solid #e6eef3;text-align:center}
+
+    /* RIGHT COLUMN */
+    .right{display:flex;flex-direction:column;gap:16px}
+    .card-panel{background:linear-gradient(180deg,#fff,#fbffff);padding:14px;border-radius:12px;box-shadow:0 8px 18px rgba(6,18,30,0.03)}
+    .row{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    .chips{display:flex;gap:8px;align-items:center}
+    .chip{padding:8px 12px;border-radius:999px;background:#eef7ff;border:1px solid #d8f0ff;cursor:pointer;font-weight:700;color:var(--green)}
+    .chip.active{background:linear-gradient(90deg,var(--blue),#60a5fa);color:white;border:none;box-shadow:0 8px 20px rgba(33,150,243,0.14)}
+
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .stat{padding:10px;border-radius:10px;background:linear-gradient(180deg,#ffffff,#fbfeff);text-align:center;box-shadow:0 8px 18px rgba(8,20,40,0.04)}
+    .stat .n{font-weight:700;font-size:18px;color:var(--green)}
+    .stat .l{color:var(--muted);font-size:13px}
+
+    canvas{width:100%;height:160px;border-radius:8px;background:linear-gradient(180deg,#fbfcff,#ffffff);}
+
+    /* Achievements */
+    .achieve-row{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    .badge{font-size:28px}
+
+    /* Wave animation classes for inlined svg shapes */
+    .wave { animation: moveWave 8s cubic-bezier(0.4,0,0.2,1) infinite; transform-origin: center; }
+    .wave2 { animation: moveWave 12s cubic-bezier(0.4,0,0.2,1) infinite reverse; opacity:0.85; }
+
+    @keyframes moveWave {
+      from{ transform: translateX(0px) }
+      to{ transform: translateX(-200px) }
+    }
+
+    /* Toast */
+    #toast { position: fixed; right: 18px; bottom: 18px; padding: 12px 16px; border-radius: 10px; color: white; font-weight:700; display:none; z-index:9999; }
+
+    /* Responsive */
+    @media(max-width:900px){
+      .card{grid-template-columns:1fr;padding:16px}
+      .glass{width:220px;height:360px}
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:540px){
+      body{padding:12px}
+      .chip{padding:6px 10px;font-size:13px}
+      .glass{width:180px;height:320px}
+    }
+
+    /* Small helper */
+    .muted-2{color:#4b5563;font-size:13px}
+    .small{font-size:13px}
+    .hr{height:1px;background:#eef2f7;margin:12px 0;border-radius:2px}
+  </style>
+</head>
+<body>
+
+<div class="card" role="application" aria-label="Daily Nutri Water Tracking">
+  <!-- LEFT -->
+  <div class="left">
+    <div class="header">
+      <div>
+        <div class="title">Daily Nutri • Water Tracker</div>
+        <div class="sub">Bangun kebiasaan minum — air bergerak & naik saat ditambah</div>
+      </div>
+      <div class="sub">Target default: <strong id="displayTarget">2000 ml</strong></div>
+    </div>
+
+    <div class="glass-wrap card-panel" aria-hidden="false">
+      <!-- SVG glass with masking wave (inline) -->
+      <div class="glass" id="glass" role="img" aria-label="Gelas air animasi">
+        <svg viewBox="0 0 200 320" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="false">
+          <defs>
+            <clipPath id="glassClip">
+              <rect x="40" y="28" width="120" height="240" rx="20"/>
+            </clipPath>
+
+            <!-- wave path definition lebih smooth dan panjang -->
+            <path id="wavePath" d="M-400 28 Q -350 8 -300 28 T -200 28 T -100 28 T 0 28 T 100 28 T 200 28 T 300 28 T 400 28 V320 H-400 Z" />
+          </defs>
+
+          <!-- glass body shadow -->
+          <rect x="30" y="18" width="140" height="260" rx="26" fill="rgba(6,18,30,0.03)"/>
+
+          <!-- water group clipped to glass -->
+          <g clip-path="url(#glassClip)">
+            <!-- lower static background -->
+            <rect x="40" y="28" width="120" height="240" fill="#f3fbff"/>
+
+            <!-- dynamic water (two waves layered) -->
+            <g id="waterGroup" transform="translate(0,268)">
+              <!-- Top wave (light blue) -->
+              <use xlink:href="#wavePath" class="wave" fill="#60a5fa" />
+              <!-- Deeper wave (blue) -->
+              <use xlink:href="#wavePath" class="wave2" fill="#2196f3" y="6"/>
+            </g>
+
+            <!-- sheen highlight -->
+            <rect x="50" y="28" width="12" height="240" rx="6" fill="rgba(255,255,255,0.22)"/>
+          </g>
+
+          <!-- glass rim -->
+          <rect x="40" y="20" width="120" height="12" rx="6" fill="#e6f7ff"/>
+          <!-- outline stroke -->
+          <rect x="36" y="16" width="128" height="248" rx="28" fill="none" stroke="#cfeefe" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="info">
+      <div class="big" id="percent">0%</div>
+      <div class="muted">Total hari ini <strong id="total">0</strong> ml • Sisa <span id="remaining">2000</span> ml</div>
+    </div>
+
+    <div class="controls">
+      <button class="btn small" onclick="addWater(125)">+125 ml</button>
+      <button class="btn small" onclick="addWater(250)">+250 ml</button>
+      <button class="btn small" onclick="addWater(500)">+500 ml</button>
+      <button class="btn small btn gray" onclick="resetToday()">Reset</button>
+    </div>
+
+    <div class="target-row">
+      <label class="muted">Set Target (ml):</label>
+      <input id="targetInput" type="number" value="2000" aria-label="Set target in ml"/>
+      <button class="btn small btn orange" onclick="setTarget()">Set</button>
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <div class="card-panel">
+      <div class="row">
+        <div>
+          <div style="font-weight:700">History & Insights</div>
+          <div class="sub">Pilih periode untuk melihat data</div>
+        </div>
+        <div class="chips" role="tablist" aria-label="Select range">
+          <div class="chip active" id="chip-day" onclick="selectRange('day')" role="tab" aria-selected="true">Per Hari</div>
+          <div class="chip" id="chip-week" onclick="selectRange('week')" role="tab" aria-selected="false">Minggu</div>
+          <div class="chip" id="chip-month" onclick="selectRange('month')" role="tab" aria-selected="false">Bulan</div>
+        </div>
+      </div>
+
+      <div class="stats-grid" style="margin-top:14px" aria-hidden="false">
+        <div class="stat">
+          <div class="n" id="avg">-</div>
+          <div class="l">Rata-rata (ml)</div>
+        </div>
+        <div class="stat">
+          <div class="n" id="best">-</div>
+          <div class="l">Hari Terbaik</div>
+        </div>
+        <div class="stat">
+          <div class="n" id="achv">-</div>
+          <div class="l">Target Tercapai</div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px">
+        <canvas id="historyChart" width="600" height="160" aria-label="History chart"></canvas>
+      </div>
+    </div>
+
+    <div class="card-panel" style="display:flex;gap:12px;align-items:center;justify-content:space-between">
+      <div>
+        <div style="font-weight:700">Achievements</div>
+        <div class="sub">Badge akan muncul saat kamu konsisten</div>
+      </div>
+      <div style="text-align:right">
+        <div id="badge" class="badge">🏅</div>
+        <div class="muted" style="font-size:13px">Badge Saat Ini</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- toast -->
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  // ----- Data & persistence -----
+  const STORAGE_KEY = "daily_nutri_water_v2"; // different key
+  const todayKey = () => new Date().toISOString().slice(0,10);
+
+  const state = {
+    target: 2000,
+    history: JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"),
+    undoStack: []
+  };
+
+  // ensure today exists
+  function ensureToday(){
+    const k = todayKey();
+    if(!state.history[k]) state.history[k] = { total: 0, entries: [] };
+  }
+  ensureToday();
+
+  // ----- UI refs -----
+  const totalEl = document.getElementById("total");
+  const remainingEl = document.getElementById("remaining");
+  const percentEl = document.getElementById("percent");
+  const displayTargetEl = document.getElementById("displayTarget");
+  const waterGroup = document.getElementById("waterGroup");
+  const targetInput = document.getElementById("targetInput");
+  const badgeEl = document.getElementById("badge");
+  const canvas = document.getElementById("historyChart");
+  const ctx = canvas.getContext("2d");
+
+  let range = 'day';
+
+  // ----- Persistence -----
+  function save(){
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state.history));
+  }
+
+  function getTotalFor(dateKey){
+    return state.history[dateKey] ? state.history[dateKey].total : 0;
+  }
+
+  function currentTotal(){
+    return getTotalFor(todayKey());
+  }
+
+  function setTarget(){
+    const val = Number(targetInput.value) || 2000;
+    state.target = val;
+    displayTargetEl.innerText = val + " ml";
+    updateUI();
+    showToast("Target disimpan: " + val + " ml", "#22c55e");
+  }
+
+  // Undo last entry for today
+  function undo(){
+    const k = todayKey();
+    if(state.history[k] && state.history[k].entries.length){
+      const removed = state.history[k].entries.pop();
+      state.history[k].total -= removed;
+      state.undoStack.push({date:k, amount:removed});
+      if(state.history[k].total < 0) state.history[k].total = 0;
+      save();
+      animateFill();
+      updateUI();
+      showToast("Undo: -" + removed + " ml", "#f97316");
+    } else {
+      showToast("Tidak ada entri untuk di-undo", "#64748b");
+    }
+  }
+
+  function resetToday(){
+    const k = todayKey();
+    state.history[k] = { total: 0, entries: []};
+    save();
+    animateFill();
+    updateUI();
+    showToast("Data hari ini di-reset", "#ef4444");
+  }
+
+  // Add water
+  function addWater(amount){
+  const k = todayKey();
+  ensureToday();
+  // Simpan amount dan timestamp
+  state.history[k].entries.push({ amount, time: Date.now() });
+  state.history[k].total += amount;
+  // Simpan target harian pada history hari ini jika belum ada
+  if (!state.history[k].target) state.history[k].target = state.target;
+  // cap to 1.4 * target to prevent overshoot visuals
+  if(state.history[k].total > state.history[k].target * 1.4) state.history[k].total = Math.round(state.history[k].target * 1.4);
+  save();
+  animateFill();
+  updateUI();
+  showToast(getMotivationText(), "#22c55e");
+  }
+
+  function getMotivationText(){
+    const pct = Math.round((currentTotal() / state.target) * 100);
+    if(pct < 30) return "Good start! Keep sipping 💧";
+    if(pct < 60) return "Nice progress! Stay hydrated 🌿";
+    if(pct < 90) return "Almost there! 💪";
+    if(pct < 100) return "So close! One more step 🚀";
+    return "Target achieved! Fantastic 🎉";
+  }
+
+  // ----- Wave level calculation & animation -----
+  function updateWaveLevel(){
+    const total = currentTotal();
+    const pct = Math.max(0, Math.min(1, total / state.target));
+    // Area gelas: clipPath y=28 (atas), y=268 (bawah), tinggi=240
+    // 100%: y=28 (atas), 0%: y=268 (bawah), 50%: y=148 (tengah)
+    const gelasAtas = 28;
+    const gelasBawah = 268;
+    const gelasTinggi = 240;
+    // y = gelasBawah - (gelasTinggi * pct)
+    const y = Math.round(gelasBawah - (gelasTinggi * pct));
+    const wg = document.getElementById('waterGroup');
+    if(wg) wg.setAttribute('transform', `translate(0, ${y})`);
+  }
+
+  // fill "bump" animation
+  function animateFill(){
+    const el = document.getElementById('glass');
+    if(!el) return;
+    el.animate([
+      { transform: 'scale(1)' },
+      { transform: 'scale(1.02)' },
+      { transform: 'scale(1)' }
+    ], { duration: 400, easing: 'ease-out' });
+    if(percentEl){
+      percentEl.animate([
+        { transform: 'scale(1)' },
+        { transform: 'scale(1.06)' },
+        { transform: 'scale(1)' }
+      ], { duration: 450, easing: 'ease-out' });
+    }
+  }
+
+  // ----- Chart (canvas simple bars) -----
+  function buildSeriesFor(range){
+    const today = new Date();
+    const series = [];
+    if(range === 'day'){
+      const hours = Array.from({length:24},()=>0);
+      const todayRec = state.history[todayKey()];
+      if(todayRec && todayRec.entries.length){
+        todayRec.entries.forEach(e=>{
+          if(e && typeof e === 'object' && e.time){
+            const d = new Date(e.time);
+            const idx = d.getHours();
+            hours[idx] += e.amount;
+          } else if(typeof e === 'number') {
+            // Untuk data lama tanpa timestamp, masukkan ke jam sekarang
+            const idx = new Date().getHours();
+            hours[idx] += e;
+          }
+        });
+      }
+      for(let i=0;i<24;i++) series.push({label:`${i}h`, value: hours[i]});
+    } else if(range === 'week'){
+      for(let i=6;i>=0;i--){
+        const d = new Date(); d.setDate(d.getDate() - i);
+        const key = d.toISOString().slice(0,10);
+        series.push({label: d.toLocaleDateString('id-ID',{weekday:'short'}), value: getTotalFor(key)});
+      }
+    } else {
+      for(let i=29;i>=0;i--){
+        const d = new Date(); d.setDate(d.getDate() - i);
+        const key = d.toISOString().slice(0,10);
+        series.push({label: d.getDate().toString(), value: getTotalFor(key)});
+      }
+    }
+    return series;
+  }
+
+  function renderChart(){
+    const series = buildSeriesFor(range);
+    // responsive scaling
+    const dpr = devicePixelRatio || 1;
+    const cw = canvas.clientWidth;
+    const ch = canvas.clientHeight;
+    canvas.width = Math.round(cw * dpr);
+    canvas.height = Math.round(ch * dpr);
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.save();
+    ctx.scale(dpr, dpr);
+
+    const pad = 12;
+    const chartW = cw - pad*2;
+    const chartH = ch - pad*2;
+    const max = Math.max(state.target, ...series.map(s=>s.value), 1);
+
+    const barSlot = chartW / series.length;
+    const barW = Math.max(2, barSlot * 0.72);
+
+    series.forEach((s,i)=>{
+      const x = pad + i*barSlot + (barSlot - barW)/2;
+      const barH = (s.value / max) * (chartH - 20);
+      const y = pad + (chartH - barH);
+
+      ctx.save();
+      if(range === 'day'){
+        ctx.globalAlpha = 0.8 + 0.2 * Math.sin(Date.now()/600 + i);
+      }
+      ctx.fillStyle = s.value >= (range === 'day' ? (state.history[todayKey()]?.target || state.target) : state.target) ? '#4CAF50' : '#60a5fa';
+      roundRect(ctx, x, y, barW, barH, 6);
+      ctx.fill();
+      ctx.restore();
+
+      ctx.fillStyle = '#475569';
+      ctx.font = '11px Poppins, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(s.label, x + barW/2, pad + chartH + 12);
+    });
+
+  // target line
+  let targetLine = range === 'day' ? (state.history[todayKey()]?.target || state.target) : state.target;
+  const targetY = pad + (chartH - (targetLine / max) * (chartH - 20));
+  ctx.strokeStyle = '#ffb86b';
+  ctx.setLineDash([6,4]);
+  ctx.beginPath(); ctx.moveTo(pad, targetY); ctx.lineTo(pad + chartW, targetY); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#ff8c42';
+  ctx.font = '12px Poppins, sans-serif';
+  ctx.textAlign = 'right';
+  ctx.fillText('Target', pad + chartW, targetY - 6);
+
+    ctx.restore();
+  }
+
+  // helper rounded rect
+  function roundRect(ctx, x, y, w, h, r){
+    const radius = r || 5;
+    ctx.beginPath();
+    ctx.moveTo(x + radius, y);
+    ctx.arcTo(x + w, y, x + w, y + h, radius);
+    ctx.arcTo(x + w, y + h, x, y + h, radius);
+    ctx.arcTo(x, y + h, x, y, radius);
+    ctx.arcTo(x, y, x + w, y, radius);
+    ctx.closePath();
+  }
+
+  // ----- UI updates & stats -----
+  function updateUI(){
+  const k = todayKey();
+  const total = currentTotal();
+  // Target harian khusus hari ini
+  const targetToday = state.history[k]?.target || state.target;
+  totalEl.innerText = total;
+  remainingEl.innerText = Math.max(0, targetToday - total);
+  const pct = Math.round(Math.min(1, total / targetToday) * 100);
+    // Selalu tampilkan persentase air yang terisi
+    percentEl.innerText = pct + '%';
+  displayTargetEl.innerText = targetToday + ' ml';
+  targetInput.value = targetToday;
+    updateWaveLevel();
+    // Sembunyikan grafik jika mode perhari
+    if (range === 'day') {
+      canvas.style.display = 'none';
+    } else {
+      canvas.style.display = '';
+      renderChart();
+    }
+    updateStats();
+    updateBadge();
+    // Hitung durasi minum air hari ini
+    const entries = (state.history[k]?.entries || []).filter(e => e && typeof e === 'object' && e.time);
+    let durasiText = '-';
+    if(entries.length > 1){
+      const start = entries[0].time;
+      const end = entries[entries.length-1].time;
+      const durasiMs = end - start;
+      const durasiJam = Math.floor(durasiMs / (1000*60*60));
+      const durasiMenit = Math.floor((durasiMs % (1000*60*60)) / (1000*60));
+      durasiText = `${durasiJam} jam ${durasiMenit} menit`;
+    }
+    let infoEl = document.getElementById('drinkDuration');
+    if(!infoEl){
+      infoEl = document.createElement('div');
+      infoEl.id = 'drinkDuration';
+      infoEl.className = 'muted';
+      percentEl.parentNode.appendChild(infoEl);
+    }
+    infoEl.innerText = `Durasi minum hari ini: ${durasiText}`;
+  }
+
+  function updateStats(){
+    const series = buildSeriesFor(range).map(s=>s.value);
+    const sum = series.reduce((a,b)=>a+b,0);
+    const avg = Math.round(sum / series.length) || 0;
+    const best = Math.max(...series) || 0;
+    const achvDays = series.filter(v => v >= state.target).length;
+    document.getElementById('avg').innerText = avg + ' ml';
+    document.getElementById('best').innerText = best + ' ml';
+    document.getElementById('achv').innerText = achvDays + ' / ' + series.length;
+  }
+
+  function updateBadge(){
+    // Hitung hari berturut-turut user konsisten minum air sesuai target
+    let streak = 0;
+    for(let i=0;i<30;i++){
+      const d = new Date(); d.setDate(d.getDate() - i);
+      const key = d.toISOString().slice(0,10);
+      const targetHari = state.history[key]?.target || state.target;
+      if(getTotalFor(key) >= targetHari){
+        streak++;
+      } else {
+        break;
+      }
+    }
+    if(streak >= 7) badgeEl.innerText = '🏆 Gold';
+    else if(streak >= 4) badgeEl.innerText = '🥈 Silver';
+    else if(streak >= 1) badgeEl.innerText = '🥉 Bronze';
+    else badgeEl.innerText = '🏅';
+  }
+
+  // range selector
+  function selectRange(r){
+    range = r;
+    document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+    document.getElementById('chip-' + r).classList.add('active');
+    updateUI();
+  }
+
+  // toast
+  let toastTimer = null;
+  function showToast(text, bg = '#22c55e'){
+    let t = document.getElementById('toast');
+    if(!t){
+      t = document.createElement('div');
+      t.id = 'toast';
+      document.body.appendChild(t);
+    }
+    t.style.display = 'block';
+    t.style.background = bg;
+    t.style.opacity = '1';
+    t.style.right = '18px';
+    t.style.bottom = '18px';
+    t.style.transition = 'opacity .3s';
+    t.style.padding = '12px 18px';
+    t.style.borderRadius = '10px';
+    t.style.color = '#fff';
+    t.style.fontWeight = '700';
+    t.style.boxShadow = '0 12px 30px rgba(0,0,0,0.12)';
+    t.innerText = text;
+    if(toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(()=>{ t.style.opacity = 0; setTimeout(()=>t.style.display='none',400); }, 2200);
+  }
+
+  // initial UI
+  updateUI();
+
+  // expose functions for buttons
+  window.addWater = addWater;
+  window.resetToday = resetToday;
+  window.setTarget = setTarget;
+  window.selectRange = selectRange;
+  window.undo = undo;
+
+  // --- Seed some mock data if history small (for better weekly/monthly charts) ---
+  (function seedMock(){
+    const keys = Object.keys(state.history);
+    if(keys.length < 6){
+      const now = new Date();
+      for(let i=0;i<30;i++){
+        const d = new Date(); d.setDate(now.getDate() - i);
+        const key = d.toISOString().slice(0,10);
+        if(!state.history[key]){
+          const v = Math.floor(800 + Math.random()*1500); // 800..2300
+          state.history[key] = { total: v, entries: [v] };
+        }
+      }
+      save();
+      updateUI();
+    }
+  })();
+
+  // redraw chart on resize
+  window.addEventListener('resize', ()=>{ renderChart(); });
+
+  // small helper: keyboard shortcuts for testing
+  window.addEventListener('keydown', (e)=>{
+    if(e.key === '1') addWater(125);
+    if(e.key === '2') addWater(250);
+    if(e.key === '3') addWater(500);
+  });
+
+  // Accessibility: focus on chips via keyboard
+  document.querySelectorAll('.chip').forEach(chip=>{
+    chip.setAttribute('tabindex','0');
+    chip.addEventListener('keydown', e=>{
+      if(e.key === 'Enter' || e.key === ' ') chip.click();
+    });
+  });
+
+</script>
+</body>
+</html>
