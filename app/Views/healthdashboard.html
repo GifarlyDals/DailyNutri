@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DailyNutri Dashboard</title>
+  <link rel="stylesheet" href="../../public/healthdashboard.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="leaf-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#22c55e" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 2C8 2 4 6 4 10c0 5.25 8 12 8 12s8-6.75 8-12c0-4-4-8-8-8z" />
+          </svg>
+        </div>
+        <h2><span class="logo-black">Daily</span><span class="logo-green">Nutri</span></h2>
+      </div>
+
+      <nav>
+        <a href="#" class="dashboard-link">
+          <span class="icon">📈</span>
+          Dashboard
+        </a>
+        <a href="#" class="active">
+          <span class="icon">👥</span>
+          User Management
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <div></div>
+        <div class="profile-icon">👤</div>
+      </header>
+
+      <section class="content">
+        <h1>User Management</h1>
+        <p>Pantau pengguna dalam platform DailyNutri</p>
+
+        <!-- Statistic Cards -->
+        <div class="stats">
+          <div class="card">
+            <div class="card-header">
+              <span>Total Users</span>
+              <span class="emoji">👤</span>
+            </div>
+            <h2>-</h2>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span>Active Users</span>
+              <span class="emoji">🟢</span>
+            </div>
+            <h2>-</h2>
+          </div>
+        </div>
+
+        <!-- Users Table -->
+        <div class="table-container">
+          <div class="table-header">
+            <input type="text" placeholder="Search by name or email..." />
+            <div class="filters">
+              <select>
+                <option>All Roles</option>
+              </select>
+              <select>
+                <option>All Status</option>
+              </select>
+            </div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Last Active</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="4" class="placeholder">
+                  Belum ada data pengguna
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
