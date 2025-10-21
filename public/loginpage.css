@@ -8,7 +8,6 @@
 body {
   background-color: #f9f9f9;
   color: #222;
-  line-height: 1.6;
 }
 
 /* Navbar */
@@ -28,7 +27,7 @@ body {
 }
 
 .logo img {
-  width: 28px; /* sedikit lebih besar agar seimbang dengan teks */
+  width: 28px;
   height: 28px;
 }
 
@@ -70,8 +69,8 @@ body {
   font-weight: 600;
 }
 
-/* Hero Section */
-.hero {
+/* Signup Section */
+.signup {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -80,56 +79,62 @@ body {
   background: linear-gradient(to bottom, #ffffff 0%, #f9f9f9 100%);
 }
 
-.hero-text {
+.signup-form {
   flex: 1;
   min-width: 300px;
-  max-width: 500px;
+  max-width: 400px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.hero-text h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+.signup-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-.highlight {
-  color: #16a34a;
+.checkbox input {
+  margin-right: 8px;
+  accent-color: #16a34a;
 }
 
-.hero-text p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.btn-primary {
+.btn-register {
   background-color: #16a34a;
   border: none;
-  padding: 12px 22px;
-  color: white;
+  width: 100%;
+  padding: 12px;
   border-radius: 6px;
+  color: white;
   font-weight: 600;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
-.btn-secondary {
-  background-color: #16a34a;
-  opacity: 0.85;
-  border: none;
-  padding: 12px 22px;
-  color: white;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
+.btn-register:hover {
+  background-color: #15803d;
 }
 
-/* Hero Image */
-.hero-image {
+/* Image Section */
+.signup-image {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -215,14 +220,11 @@ body {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .hero {
+  .signup {
     flex-direction: column;
     text-align: center;
   }
-  .hero-buttons {
-    justify-content: center;
-  }
-  .hero-image {
+  .signup-image {
     margin-top: 40px;
   }
 }
