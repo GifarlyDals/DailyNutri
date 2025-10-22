@@ -29,7 +29,7 @@ class CAuth extends BaseController
         $username = $this->request->getPost('username');
         $email    = $this->request->getPost('email');
         $password = $this->request->getPost('password');
-        $confirm  = $this->request->getPost('confirm_password');
+        $confirm  = $this->request->getPost('confirm');
 
         if ($password !== $confirm) {
             session()->setFlashdata('error', 'Password dan konfirmasi password tidak sama!');
