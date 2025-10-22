@@ -1,312 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url('/assets/dashboardUser.css') ?>">
-    <title>Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DailyNutri Dashboard</title>
+  <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <style>
+    /* Sedikit style tambahan agar sidebar tidak menutup layar penuh */
+    @media (max-width: 768px) {
+      .offcanvas {
+        width: 200px !important; /* Sidebar lebih kecil */
+        opacity: 0.97;
+      }
+    }
+  </style>
 </head>
-<body>
-<div class="nutrition-tracker-website-community">
-  <div class="health-dashboard">
-    <div class="header">
-      <div class="container">
-        <div class="container2">
-          <div class="div">
-            <div class="i">
-              <div class="svg">
-                <img class="frame" src="frame0.svg" />
-              </div>
-            </div>
-            <div class="daily-nutri">DailyNutri</div>
-          </div>
-        </div>
-        <div class="container3">
-          <img class="icon" src="icon0.svg" />
-          <div class="text">
-            <div class="daily-tracking">Daily Tracking</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container4">
-      <div class="container5">
-        <div class="navigation">
-          <div class="button">
-            <img class="icon2" src="icon1.svg" />
-            <div class="dashboard">Dashboard</div>
-          </div>
-          <div class="button2">
-            <img class="icon3" src="icon2.svg" />
-            <div class="meal-planner">Meal Planner</div>
-          </div>
-          <div class="button2">
-            <img class="icon4" src="icon3.svg" />
-            <div class="water-tracking">Water Tracking</div>
-          </div>
-          <div class="button2">
-            <img class="icon5" src="icon4.svg" />
-            <div class="health-tracking">Health Tracking</div>
-          </div>
-        </div>
-      </div>
-      <div class="main-content">
-        <div class="container6">
-          <div class="heading-2">
-            <div class="selamat-datang-di-health-dashboard">
-              Selamat Datang di Health Dashboard
-            </div>
-          </div>
-          <div class="paragraph">
-            <div class="pantau-kesehatan-harian-anda-dengan-mudah-dan-tera">
-              Pantau kesehatan harian Anda dengan mudah dan teratur
-            </div>
-          </div>
-        </div>
-        <div class="container7">
-          <div class="card">
-            <div class="card-title">
-              <img class="icon6" src="icon5.svg" />
-              <div class="meal-planner2">Meal Planner</div>
-            </div>
-            <div class="card-content">
-              <div class="health-dashboard2">
-                <div class="container8">
-                  <div class="text2">
-                    <div class="kalori">Kalori</div>
-                  </div>
-                  <div class="text3">
-                    <div class="_1330-2000-kal">1330/2000 kal</div>
-                  </div>
-                </div>
-                <div class="primitive-div">
-                  <div class="container9"></div>
-                </div>
-              </div>
-              <div class="health-dashboard2">
-                <div class="container8">
-                  <div class="text4">
-                    <div class="makanan">Makanan</div>
-                  </div>
-                  <div class="text5">
-                    <div class="_3-4-makanan">3/4 makanan</div>
-                  </div>
-                </div>
-                <div class="primitive-div2">
-                  <div class="container9"></div>
-                </div>
-              </div>
-              <div class="button3">
-                <div class="lihat-detail">Lihat Detail</div>
-              </div>
-            </div>
-          </div>
-          <div class="card2">
-            <div class="card-title">
-              <img class="icon7" src="icon6.svg" />
-              <div class="water-tracking2">Water Tracking</div>
-            </div>
-            <div class="card-content2">
-              <div class="health-dashboard2">
-                <div class="container8">
-                  <div class="text6">
-                    <div class="air-minum">Air Minum</div>
-                  </div>
-                  <div class="text7">
-                    <div class="_1-5-l-2-5-l">1.5L/2.5L</div>
-                  </div>
-                </div>
-                <div class="primitive-div3">
-                  <div class="container9"></div>
-                </div>
-              </div>
-              <div class="health-dashboard3">
-                <div class="text8">
-                  <div class="gelas-hari-ini">Gelas hari ini</div>
-                </div>
-                <div class="badge">
-                  <div class="_6-gelas">6 gelas</div>
-                </div>
-              </div>
-              <div class="button4">
-                <div class="lihat-detail">Lihat Detail</div>
-              </div>
-            </div>
-          </div>
-          <div class="card3">
-            <div class="card-title">
-              <img class="icon8" src="icon7.svg" />
-              <div class="health-tracking2">Health Tracking</div>
-            </div>
-            <div class="card-content3">
-              <div class="health-dashboard2">
-                <div class="container8">
-                  <div class="text9">
-                    <div class="langkah">Langkah</div>
-                  </div>
-                  <div class="text10">
-                    <div class="_8-500-10-000">8,500/10,000</div>
-                  </div>
-                </div>
-                <div class="primitive-div4">
-                  <div class="container9"></div>
-                </div>
-              </div>
-              <div class="health-dashboard4">
-                <div class="container10">
-                  <div class="text11">
-                    <div class="detak-jantung">Detak Jantung</div>
-                  </div>
-                  <div class="paragraph2">
-                    <div class="_72-bpm">72 bpm</div>
-                  </div>
-                </div>
-                <div class="container11">
-                  <div class="text12">
-                    <div class="tidur">Tidur</div>
-                  </div>
-                  <div class="paragraph2">
-                    <div class="_7-5-h">7.5h</div>
-                  </div>
-                </div>
-              </div>
-              <div class="button5">
-                <div class="lihat-detail">Lihat Detail</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="health-dashboard">
-    <div class="header">
-      <div class="container12">
-        <div class="container2">
-          <div class="div">
-            <div class="i">
-              <div class="svg">
-                <img class="frame2" src="frame1.svg" />
-              </div>
-            </div>
-            <div class="daily-nutri">DailyNutri</div>
-          </div>
-        </div>
-        <div class="primitive-span">
-          <div class="text13">
-            <img class="icon9" src="icon8.svg" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container4">
-      <div class="container13">
-        <div class="navigation">
-          <div class="button">
-            <img class="icon10" src="icon9.svg" />
-            <div class="dashboard">Dashboard</div>
-          </div>
-          <div class="button2">
-            <img class="icon11" src="icon10.svg" />
-            <div class="meal-planner">Meal Planner</div>
-          </div>
-          <div class="button2">
-            <img class="icon12" src="icon11.svg" />
-            <div class="water-tracking">Water Tracking</div>
-          </div>
-        </div>
-      </div>
-      <div class="main-content2">
-        <div class="container6">
-          <div class="heading-2">
-            <div class="selamat-datang-di-health-dashboard">
-              Selamat Datang di Health Dashboard
-            </div>
-          </div>
-          <div class="paragraph">
-            <div class="pantau-kesehatan-harian-anda-dengan-mudah-dan-tera">
-              Pantau kesehatan harian Anda dengan mudah dan teratur
-            </div>
-          </div>
-        </div>
-        <div class="container7">
-          <div class="card">
-            <div class="card-title">
-              <img class="icon13" src="icon12.svg" />
-              <div class="meal-planner2">Meal Planner</div>
-            </div>
-            <div class="card-content">
-              <div class="health-dashboard2">
-                <div class="container8">
-                  <div class="text2">
-                    <div class="kalori">Kalori</div>
-                  </div>
-                  <div class="text3">
-                    <div class="_1330-2000-kal">1330/2000 kal</div>
-                  </div>
-                </div>
-                <div class="primitive-div">
-                  <div class="container9"></div>
-                </div>
-              </div>
-              <div class="health-dashboard2">
-                <div class="container8">
-                  <div class="text4">
-                    <div class="makanan">Makanan</div>
-                  </div>
-                  <div class="text5">
-                    <div class="_3-4-makanan">3/4 makanan</div>
-                  </div>
-                </div>
-                <div class="primitive-div2">
-                  <div class="container9"></div>
-                </div>
-              </div>
-              <div class="button3">
-                <div class="lihat-detail">Lihat Detail</div>
-              </div>
-            </div>
-          </div>
-          <div class="card2">
-            <div class="card-title">
-              <img class="icon14" src="icon13.svg" />
-              <div class="water-tracking2">Water Tracking</div>
-            </div>
-            <div class="card-content4">
-              <div class="health-dashboard2">
-                <div class="container8">
-                  <div class="text6">
-                    <div class="air-minum">Air Minum</div>
-                  </div>
-                  <div class="text14">
-                    <div class="_1-5-l-2-5-l2">1.5L/2.5L</div>
-                  </div>
-                </div>
-                <div class="primitive-div3">
-                  <div class="container9"></div>
-                </div>
-              </div>
-              <div class="health-dashboard3">
-                <div class="text8">
-                  <div class="gelas-hari-ini">Gelas hari ini</div>
-                </div>
-                <div class="badge">
-                  <div class="_6-gelas2">6 gelas</div>
-                </div>
-              </div>
-              <div class="button6">
-                <div class="lihat-detail2">Lihat Detail</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="text15">
-    <div class="_0">0</div>
-  </div>
-</div>
+<body class="bg-light">
 
+  <!-- Navbar (Mobile topbar with toggle) -->
+  <nav class="navbar navbar-light bg-white shadow-sm px-3 d-md-none fixed-top">
+    <button class="btn btn-outline-success border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <a class="navbar-brand ms-2 fw-bold text-success" href="#">
+      <img src="DailyNutri Logo.png" alt="Logo" width="24" height="24" class="me-1"> DailyNutri
+    </a>
+  </nav>
+
+  <div class="d-flex" style="margin-top:56px;">
+    <!-- Sidebar -->
+  <div class="offcanvas-md offcanvas-start bg-white border-end shadow-sm" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebarMenuLabel">Daily Nutri</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+      <div class="offcanvas-body d-flex flex-column flex-shrink-0 p-3" style="width: 240px; min-height: 100vh;">
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+          <img src="DailyNutri Logo.png" alt="Logo" width="24" height="24" class="me-2">
+          <span class="fs-5 fw-bold text-success d-none d-md-inline">DailyNutri</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto text-center text-md-start">
+          <li class="nav-item">
+            <a href="#" class="nav-link active bg-success text-white">
+              <i class="bi bi-house-door fs-5"></i><span class="d-none d-md-inline ms-2">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-dark">
+              <i class="bi bi-egg-fried fs-5"></i><span class="d-none d-md-inline ms-2">Meal Planner</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-dark">
+              <i class="bi bi-droplet fs-5"></i><span class="d-none d-md-inline ms-2">Water Tracking</span>
+            </a>
+          </li>
+        </ul>
+        <div class="mt-auto text-center">
+          <a href="#" class="d-inline-flex align-items-center justify-content-center border rounded-circle text-success" style="width:40px; height:40px;">
+            <i class="bi bi-person fs-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1 p-4">
+      <div class="alert alert-success bg-opacity-10 border-success text-success shadow-sm">
+        <h5 class="fw-bold mb-1">Selamat Datang di Health Dashboard</h5>
+        <p class="mb-0 text-success">Pantau kesehatan harian Anda dengan mudah dan teratur</p>
+      </div>
+
+      <div class="row g-4 mt-3">
+        <div class="col-md-6">
+          <div class="card border-success shadow-sm">
+            <div class="card-body">
+              <h6 class="card-title text-success fw-semibold"><i class="bi bi-egg-fried me-1"></i> Meal Planner</h6>
+              <p class="mb-1 small mt-3">Kalori</p>
+              <small>1330/2000 kal</small>
+              <div class="progress mb-3" style="height: 6px;">
+                <div class="progress-bar bg-success" style="width: 67%;"></div>
+              </div>
+              <p class="mb-1 small">Makanan</p>
+              <small>3/4 makanan</small>
+              <div class="progress mb-3" style="height: 6px;">
+                <div class="progress-bar bg-success" style="width: 75%;"></div>
+              </div>
+              <button class="btn btn-success w-100 fw-semibold">Lihat Detail</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card border-primary shadow-sm">
+            <div class="card-body">
+              <h6 class="card-title text-primary fw-semibold"><i class="bi bi-droplet me-1"></i> Water Tracking</h6>
+              <p class="mb-1 small mt-3">Air Minum</p>
+              <small>1.5L/2.5L</small>
+              <div class="progress mb-3" style="height: 6px;">
+                <div class="progress-bar bg-success" style="width: 60%;"></div>
+              </div>
+              <p class="mb-1 small">Gelas hari ini</p>
+              <small>6 gelas</small>
+              <div class="progress mb-3" style="height: 6px;">
+                <div class="progress-bar bg-success" style="width: 75%;"></div>
+              </div>
+              <button class="btn btn-primary w-100 fw-semibold">Lihat Detail</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
+  <script src="<?= base_url('assets/js/offcanvasFix.js') ?>"></script>
 </body>
 </html>
