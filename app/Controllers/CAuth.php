@@ -56,7 +56,7 @@ class CAuth extends BaseController
         $user->insert($data);
 
         session()->setFlashdata('tambah', 'Akun berhasil terdaftar!');
-        return redirect()->to(base_url('cauth/register'));
+        return redirect()->to(base_url('/register'));
     }
 
     public function ceklogin() 
