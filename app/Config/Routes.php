@@ -12,6 +12,8 @@ $routes->get('/dashboard', 'Dashboard::index');
 
 $routes->get('/logout', 'Login::logout');
 $routes->get('/login', 'CAuth::index');
+$routes->post('/login/ceklogin', 'CAuth::ceklogin');
+
 $routes->get('/register', 'CAuth::register');
 $routes->post('/register/prosesregister', 'CAuth::prosesregister');
 

@@ -66,22 +66,29 @@ class CAuth extends BaseController
         $Password = $this->request->getVar('password');
         $cek = $user->where(['email' => $email])->first();
         if ($cek) {
-            if (password_verify($Password, $cek['Password'])) {
+            if (password_verify($Password, $cek['password'])) {
                 session()->set([
                     'username' => $cek['username'],
                     'email' => $cek['email'],
                     'idUser' => $cek['idUser'],
                     'logged_in' => true
                 ]);
-                return redirect()->to('');
+                return redirect()->to('/dashboard');
             } else {
                 session()->setFlashdata('error', 'Periksa Kembali Username Dan Password Anda!!');
-                return redirect()->to('cauth');
+                return redirect()->to('/login');
             }
         } else {
             session()->setFlashdata('error', 'Akun Tidak Ditemukan !!');
-            return redirect()->to('cauth');
+            return redirect()->to('/login');
         }
     }
+
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/login');
+    }
+
 
 }

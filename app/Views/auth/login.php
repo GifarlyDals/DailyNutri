@@ -8,7 +8,7 @@
         <div class="col-lg-6 mb-4 mb-lg-0">
 
 
-          <form action="<?= base_url('') ?>" method="post" class="p-4 shadow-sm bg-white rounded-4">
+          <form action="<?= base_url('/login/ceklogin') ?>" method="post" class="p-4 shadow-sm bg-white rounded-4">
 
             <div class="mb-3">
               <label class="form-label fw-semibold">Email</label>
@@ -19,7 +19,6 @@
               <label class="form-label fw-semibold">Password</label>
               <input type="password" class="form-control" name="password" placeholder="Masukkan Password Anda" required>
             </div>
-
 
             <button type="submit" class="btn btn-success w-100 fw-semibold py-2">Masuk</button>
 

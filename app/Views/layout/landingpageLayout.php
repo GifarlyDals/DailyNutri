@@ -15,7 +15,7 @@
   <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
     <div class="container d-flex justify-content-between align-items-center">
       <a class="navbar-brand d-flex align-items-center gap-2" href="<?= base_url('/') ?>">
-        <img src="assets/png/logoDN.png" alt="DailyNutri Logo" width="24" height="24">
+        <img src="<?= base_url('assets/png/logoDN.png') ?>" alt="DailyNutri Logo" width="24" height="24">
         <h1 class="h5 m-0 fw-bold">DailyNutri</h1>
       </a>
       <div class="d-flex align-items-center gap-3">

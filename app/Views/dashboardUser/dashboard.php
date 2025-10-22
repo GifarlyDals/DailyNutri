@@ -24,7 +24,7 @@
       <i class="bi bi-list fs-4"></i>
     </button>
     <a class="navbar-brand ms-2 fw-bold text-success" href="#">
-      <img src="DailyNutri Logo.png" alt="Logo" width="24" height="24" class="me-1"> DailyNutri
+      <img src="<?= base_url('assets/png/logoDN.png') ?>" alt="Logo" width="24" height="24" class="me-1"> DailyNutri
     </a>
   </nav>
 
@@ -38,7 +38,7 @@
 
       <div class="offcanvas-body d-flex flex-column flex-shrink-0 p-3" style="width: 240px; min-height: 100vh;">
         <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-          <img src="DailyNutri Logo.png" alt="Logo" width="24" height="24" class="me-2">
+          <img src="<?= base_url('assets/png/logoDN.png') ?>" alt="Logo" width="24" height="24" class="me-2">
           <span class="fs-5 fw-bold text-success d-none d-md-inline">DailyNutri</span>
         </a>
         <hr>
@@ -70,8 +70,8 @@
     <!-- Main Content -->
     <main class="flex-grow-1 p-4">
       <div class="alert alert-success bg-opacity-10 border-success text-success shadow-sm">
-        <h5 class="fw-bold mb-1">Selamat Datang di Health Dashboard</h5>
-        <p class="mb-0 text-success">Pantau kesehatan harian Anda dengan mudah dan teratur</p>
+        <h5 class="fw-bold mb-1">Selamat Datang, <?= session()->get('username'); ?></h5>
+        <p class="mb-0 text-success">Pantau kalori dan kebutuhan air anda dengan mudah dan teratur</p>
       </div>
 
       <div class="row g-4 mt-3">
