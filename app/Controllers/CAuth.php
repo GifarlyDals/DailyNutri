@@ -22,7 +22,7 @@ class CAuth extends BaseController
         ];
         return view('auth/register', $data);
     }
-   public function prosesregister()
+    public function prosesregister()
     {
         $user = new Muser();
 
@@ -36,8 +36,7 @@ class CAuth extends BaseController
             return redirect()->back()->withInput();
         }
 
-        $existingUser = $user->where('username', $username)
-                            ->orWhere('email', $email)
+        $existingUser = $user->where('email', $email)
                             ->first();
 
         if ($existingUser) {

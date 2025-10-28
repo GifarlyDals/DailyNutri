@@ -44,7 +44,7 @@
 
             <button type="submit" class="btn btn-success w-100 fw-semibold py-2">Daftar</button>
 
-            <p class="mt-3 text-center">Sudah Punya Akun? <a href="#" class="text-success fw-semibold">Login</a></p>
+            <p class="mt-3 text-center">Sudah Punya Akun? <a href="<?= base_url("login") ?>" class="text-success fw-semibold">Login</a></p>
           </form>
         </div>
 

@@ -32,9 +32,30 @@
       </a>
 
       <!-- Profile icon -->
-      <a href="#" class="d-flex align-items-center justify-content-center border rounded-circle text-success" style="width:38px; height:38px;">
-        <i class="bi bi-person fs-5"></i>
-      </a>
+<!-- Profile Dropdown -->
+      <div class="dropdown">
+        <a href="#" class="d-inline-flex align-items-center justify-content-center border rounded-circle text-success" 
+          style="width:40px; height:40px;" 
+          id="profileDropdown" 
+          data-bs-toggle="dropdown" 
+          aria-expanded="false">
+          <i class="bi bi-person fs-5"></i>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2" aria-labelledby="profileDropdown" style="min-width: 200px;">
+          <li class="px-3 py-2">
+            <p class="mb-0 fw-semibold"><?= esc(session()->get('username')) ?></p>
+            <small class="text-muted"><?= esc(session()->get('email')) ?></small>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li>
+            <a class="dropdown-item text-danger fw-semibold" href="<?= base_url('logout') ?>">
+              <i class="bi bi-box-arrow-right me-2"></i> Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </nav>
 

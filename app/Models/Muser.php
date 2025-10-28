@@ -12,7 +12,7 @@ class Muser extends Model
 
     public function Tampil_data()
     {
-        return $this->db->table('User')
+        return $this->db->table('user')
             ->orderBy('idUser', 'ASC')
             ->get()
             ->getResultArray();
@@ -39,5 +39,18 @@ class Muser extends Model
     {
         return $this->countAllResults();
     }
+    
+        public function editData($data) 
+    {
+        $this->db->table('user')
+        ->where('idUser', $data['idUser'])
+        ->update($data);
+    }
 
+    public function deleteData($data)
+    {
+        $this->db->table('user')
+        ->where('idUser', $data['idUser'])
+        ->delete($data);
+    }
 }

@@ -9,8 +9,7 @@
           <h1 class="fw-bold mb-3">Track Your Health Journey<br>with <span class="text-success">DailyNutri</span></h1>
           <p class="text-secondary mb-4">Monitor your nutrition, plan your meals, and stay hydrated with our comprehensive health tracking platform. Start your wellness journey today.</p>
           <div class="d-flex gap-3 flex-wrap">
-            <button class="btn btn-success fw-semibold px-4 py-2">Get Started Free</button>
-            <button class="btn btn-outline-success fw-semibold px-4 py-2">Admin</button>
+            <a href="<?= base_url("/register") ?>" class="btn btn-success fw-semibold px-4 py-2">Mulai Gratis</a>
           </div>
         </div>
         <div class="col-lg-5 d-flex justify-content-center">

@@ -10,9 +10,13 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/admin/dashboard', 'CAdmin::index');
-$routes->get('/usermanage', 'CUserManage::index');
 
-$routes->get('/logout', 'Login::logout');
+$routes->get('/usermanage', 'CUserManage::index');
+$routes->post('/usermanage/tambahData', 'CUserManage::tambahData');
+$routes->post('/usermanage/hapus/(:num)', 'CUserManage::deleteData/$1');
+$routes->post('/usermanage/edit/(:num)', 'CUserManage::editData/$1');
+
+$routes->get('/logout', 'CAuth::logout');
 $routes->get('/login', 'CAuth::index');
 $routes->post('/login/ceklogin', 'CAuth::ceklogin');
 

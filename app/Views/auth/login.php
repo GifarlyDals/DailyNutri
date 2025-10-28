@@ -4,6 +4,12 @@
 
   <section class="signup py-5">
     <div class="container">
+      <?php if (session()->getFlashdata('error')) : ?>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <?= session()->getFlashdata('error') ?>
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      <?php endif; ?>
       <div class="row align-items-center justify-content-between">
         <div class="col-lg-6 mb-4 mb-lg-0">
 
