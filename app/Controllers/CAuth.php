@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 use App\Controllers\BaseController;
-use App\Models\MAuth;
+use App\Models\Muser;
 
 class CAuth extends BaseController
 {
@@ -24,7 +24,7 @@ class CAuth extends BaseController
     }
    public function prosesregister()
     {
-        $user = new MAuth();
+        $user = new Muser();
 
         $username = $this->request->getPost('username');
         $email    = $this->request->getPost('email');
@@ -61,28 +61,36 @@ class CAuth extends BaseController
 
     public function ceklogin() 
     {
-        $user = new MAuth();
+        $user = new Muser();
         $email = $this->request->getVar('email');
-        $Password = $this->request->getVar('password');
+        $password = $this->request->getVar('password');
+
         $cek = $user->where(['email' => $email])->first();
+
         if ($cek) {
-            if (password_verify($Password, $cek['password'])) {
+            if (password_verify($password, $cek['password'])) {
                 session()->set([
-                    'username' => $cek['username'],
-                    'email' => $cek['email'],
-                    'idUser' => $cek['idUser'],
+                    'username'  => $cek['username'],
+                    'email'     => $cek['email'],
+                    'idUser'    => $cek['idUser'],
+                    'role'      => $cek['role'],
                     'logged_in' => true
                 ]);
-                return redirect()->to('/dashboard');
+                if ($cek['role'] === 'admin') {
+                    return redirect()->to('/admin/dashboard');
+                } else {
+                    return redirect()->to('/dashboard');
+                }
             } else {
-                session()->setFlashdata('error', 'Periksa Kembali Username Dan Password Anda!!');
+                session()->setFlashdata('error', 'Password salah!');
                 return redirect()->to('/login');
             }
         } else {
-            session()->setFlashdata('error', 'Akun Tidak Ditemukan !!');
+            session()->setFlashdata('error', 'Akun tidak ditemukan!');
             return redirect()->to('/login');
         }
     }
+
 
     public function logout()
     {

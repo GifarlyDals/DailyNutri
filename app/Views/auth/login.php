@@ -22,7 +22,7 @@
 
             <button type="submit" class="btn btn-success w-100 fw-semibold py-2">Masuk</button>
 
-            <p class="mt-3 text-center">Belum Punya Akun? <a href="<?= base_url('register') ?>" class="text-success fw-semibold">Login</a></p>
+            <p class="mt-3 text-center">Belum Punya Akun? <a href="<?= base_url('login') ?>" class="text-success fw-semibold">Login</a></p>
           </form>
         </div>
 
