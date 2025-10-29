@@ -18,6 +18,10 @@ $routes->post('/usermanage/edit/(:num)', 'CUserManage::editData/$1');
 $routes->get('/editprofile', 'CUserProfile::index');  
 $routes->post('/editprofile/update/(:num)', 'CUserProfile::update/$1');
 
+$routes->get('/planmakan', 'CPlanMakan::index');
+$routes->post('/planmakan/tambah', 'CPlanMakan::tambah');
+$routes->get('/planmakan/hapus/(:num)/(:num)', 'CPlanMakan::hapus/$1/$2');
+
 
 
 $routes->get('/logout', 'CAuth::logout');

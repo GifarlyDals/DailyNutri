@@ -10,8 +10,8 @@ class CUserManage extends BaseController
 {
     public function index()
     {
+        
         $user = new Muser();
-        // ambil input dari form (GET method)
         $search = $this->request->getGet('search');
         $role   = $this->request->getGet('role');
 

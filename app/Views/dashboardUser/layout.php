@@ -85,7 +85,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-dark">
+            <a href="<?= base_url("/planmakan") ?>" class="nav-link text-dark">
               <i class="bi bi-egg-fried fs-5"></i>
               <span class="d-md-inline ms-2">Meal Planner</span>
             </a>
