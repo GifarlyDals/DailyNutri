@@ -19,6 +19,16 @@ class MPlanMakan extends Model
                     ->first();
     }
 
+    public function getWeekPlan($idUser, $weekStart, $weekEnd)
+    {
+        return $this->where('idUser', $idUser)
+                    ->where('tanggal >=', $weekStart)
+                    ->where('tanggal <=', $weekEnd)
+                    ->orderBy('tanggal', 'ASC')
+                    ->findAll();
+    }
+
+
     public function updateTotal($idPlanMakan)
     {
         $detailModel = new \App\Models\MPlanMakan();

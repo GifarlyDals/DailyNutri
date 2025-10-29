@@ -19,8 +19,12 @@ $routes->get('/editprofile', 'CUserProfile::index');
 $routes->post('/editprofile/update/(:num)', 'CUserProfile::update/$1');
 
 $routes->get('/planmakan', 'CPlanMakan::index');
+$routes->get('/planmakan/mingguan', 'CPlanMakan::mingguan');
 $routes->post('/planmakan/tambah', 'CPlanMakan::tambah');
 $routes->get('/planmakan/hapus/(:num)/(:num)', 'CPlanMakan::hapus/$1/$2');
+$routes->get('/planmakan', 'CPlanMakan::mingguan');
+$routes->get('/planmakan/bulanan', 'CPlanMakan::bulanan');
+
 
 
 

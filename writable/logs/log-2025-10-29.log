@@ -385,3 +385,375 @@ DEBUG - 2025-10-29 16:36:16 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-10-29 16:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-10-29 16:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-10-29 16:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:11:22 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:12:18 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:18:01 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:18:11 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:19:56 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:20:00 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:21:42 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:23:35 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:26:14 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:29:04 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:32:52 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:33:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:33:07 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:34:38 --> ErrorException: Undefined variable $weekStart
+[Method: GET, Route: planmakan]
+in APPPATH\Views\dashboardUser\makananPlanner.php on line 299.
+ 1 APPPATH\Views\dashboardUser\makananPlanner.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $weekStart', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php', 299)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:39:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboardUser/makananPlanner.php"
+[Method: GET, Route: planmakan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboardUser/makananPlanner.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 3 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:40:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboardUser/makananPlanner.php"
+[Method: GET, Route: planmakan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboardUser/makananPlanner.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 3 APPPATH\Controllers\CPlanMakan.php(45): view('dashboardUser/makananPlanner', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:42:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:47:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:47:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboardUser/makananPlanner.php"
+[Method: GET, Route: planmakan/mingguan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboardUser/makananPlanner.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner', [], true)
+ 3 APPPATH\Controllers\CPlanMakan.php(141): view('dashboardUser/makananPlanner', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->mingguan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 17:53:27 --> ErrorException: Undefined variable $totalKaloriMinggu
+[Method: GET, Route: planmakan/mingguan]
+in APPPATH\Views\dashboardUser\makananPlanner\makananPlannerMingguan.php on line 35.
+ 1 APPPATH\Views\dashboardUser\makananPlanner\makananPlannerMingguan.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalKaloriMinggu', 'C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner\\makananPlannerMingguan.php', 35)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\dailyNutri\\app\\Views\\dashboardUser\\makananPlanner\\makananPlannerMingguan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner/makananPlannerMingguan', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(121): view('dashboardUser/makananPlanner/makananPlannerMingguan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->mingguan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 17:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 17:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:10:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:13:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-29 18:15:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "http://localhost:8080/dashboardUser/layout.php"
+[Method: GET, Route: planmakan/mingguan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('http://localhost:8080/dashboardUser/layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('http://localhost:8080/dashboardUser/layout', [], true)
+ 3 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('dashboardUser/makananPlanner/layoutplanner', [], true)
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboardUser/makananPlanner/makananPlannerMingguan', [], true)
+ 5 APPPATH\Controllers\CPlanMakan.php(160): view('dashboardUser/makananPlanner/makananPlannerMingguan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CPlanMakan->mingguan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CPlanMakan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\dailyNutri\\public\\index.php')
+DEBUG - 2025-10-29 18:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:23:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:37:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-29 18:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
