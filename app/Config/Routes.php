@@ -24,6 +24,11 @@ $routes->post('/planmakan/tambah', 'CPlanMakan::tambah');
 $routes->get('/planmakan/hapus/(:num)/(:num)', 'CPlanMakan::hapus/$1/$2');
 $routes->get('/planmakan', 'CPlanMakan::mingguan');
 $routes->get('/planmakan/bulanan', 'CPlanMakan::bulanan');
+$routes->get('/planminum', 'CPlanMinum::index');
+$routes->post('/planminum/add', 'CPlanMinum::add');
+$routes->post('/planminum/reset', 'CPlanMinum::reset');
+$routes->post('/planminum/target', 'CPlanMinum::target');
+
 
 
 

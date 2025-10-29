@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Profile - DailyNutri</title>
-
+  <link rel="icon" href="<?= base_url("assets/png/logoDN.png") ?>">
   <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
@@ -109,25 +109,6 @@
 
       <div class="col-md-2 text-center p-4">
         <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit Profile</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- contoh tracking cards -->
-  <div class="row g-4">
-    <div class="col-md-6">
-      <div class="card p-4">
-        <h6 class="text-primary">Tracking Makanan</h6>
-        <p class="mb-1">Kalori Harian</p>
-        <div class="progress mb-3"><div class="progress-bar bg-success" style="width:70%"></div></div>
-        <!-- lainnya... -->
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card p-4">
-        <h6 class="text-primary">Tracking Minuman</h6>
-        <p class="mb-1">Air (2000 ml)</p>
-        <div class="progress mb-3"><div class="progress-bar bg-success" style="width:80%"></div></div>
       </div>
     </div>
   </div>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DailyNutri Dashboard</title>
+  <link rel="icon" href="<?= base_url("assets/png/logoDN.png") ?>">
   <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <style>
@@ -91,7 +92,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-dark">
+            <a href="<?= base_url('/planminum') ?>" class="nav-link text-dark">
               <i class="bi bi-droplet fs-5"></i>
               <span class="d-md-inline ms-2">Water Tracking</span>
             </a>
