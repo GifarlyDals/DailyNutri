@@ -15,6 +15,10 @@ $routes->get('/usermanage', 'CUserManage::index');
 $routes->post('/usermanage/tambahData', 'CUserManage::tambahData');
 $routes->post('/usermanage/hapus/(:num)', 'CUserManage::deleteData/$1');
 $routes->post('/usermanage/edit/(:num)', 'CUserManage::editData/$1');
+$routes->get('/editprofile', 'CUserProfile::index');  
+$routes->post('/editprofile/update/(:num)', 'CUserProfile::update/$1');
+
+
 
 $routes->get('/logout', 'CAuth::logout');
 $routes->get('/login', 'CAuth::index');

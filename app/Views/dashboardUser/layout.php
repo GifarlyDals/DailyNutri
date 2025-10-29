@@ -31,8 +31,6 @@
         <span class="fw-bold text-success">DailyNutri</span>
       </a>
 
-      <!-- Profile icon -->
-<!-- Profile Dropdown -->
       <div class="dropdown">
         <a href="#" class="d-inline-flex align-items-center justify-content-center border rounded-circle text-success" 
           style="width:40px; height:40px;" 
@@ -51,6 +49,9 @@
           <li>
             <a class="dropdown-item text-danger fw-semibold" href="<?= base_url('logout') ?>">
               <i class="bi bi-box-arrow-right me-2"></i> Logout
+            </a>
+            <a class="dropdown-item text-warning fw-semibold" href="<?= base_url('/editprofile') ?>">
+              <i class="bi bi-pencil-square me-2"></i> Edit Profil
             </a>
           </li>
         </ul>

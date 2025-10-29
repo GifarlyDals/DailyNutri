@@ -8,7 +8,7 @@ class Muser extends Model
 {
     protected $table            = 'user';
     protected $primaryKey       = 'idUser ';
-    protected $allowedFields    = ['username', 'email', 'password', 'role'];
+    protected $allowedFields    = ['username', 'email', 'password', 'role', 'profilPict'];
 
     public function Tampil_data()
     {
@@ -16,6 +16,10 @@ class Muser extends Model
             ->orderBy('idUser', 'ASC')
             ->get()
             ->getResultArray();
+    }
+    public function getById($idUser)
+    {
+        return $this->where('idUser', $idUser)->first();
     }
     public function searchAndFilter($search = null, $role = null)
     {

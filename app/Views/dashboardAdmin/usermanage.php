@@ -95,12 +95,28 @@
                     <td><?php echo$value['idUser']?></td>
                   <td>
                     <div class="d-flex align-items-center">
+                      
+                      <!-- Avatar -->
+                      <?php if (!empty($value['profilPict'])): ?>
+                        <img src="<?= base_url('uploads/profile/'.$value['profilPict']) ?>" 
+                            class="me-2 rounded-circle" 
+                            style="width:40px; height:40px; object-fit:cover;">
+                      <?php else: ?>
+                        <div class="rounded-circle bg-light d-flex align-items-center justify-content-center me-2"
+                            style="width:40px;height:40px;">
+                          <i class="bi bi-person text-muted"></i>
+                        </div>
+                      <?php endif; ?>
+
+                      <!-- Username + Email -->
                       <div>
-                        <strong><?php echo $value['username'] ?></strong><br>
-                        <small class="text-muted"><?php echo $value['email'] ?></small>
+                        <strong><?= $value['username'] ?></strong><br>
+                        <small class="text-muted"><?= $value['email'] ?></small>
                       </div>
+
                     </div>
                   </td>
+
                   <td><span class="badge bg-secondary"><?php echo $value['role'] ?></span></td>
                   <td class="text-end">
                     <div class="dropdown">
