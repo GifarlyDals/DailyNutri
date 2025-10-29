@@ -97,109 +97,109 @@
             <!-- Meal Blocks -->
             <div class="row g-3">
 
-    <!-- ==========================
-         SARAPAN
-    =========================== -->
-    <div class="col-md-6">
-        <div class="p-3 rounded-4 border bg-white">
-            <h6 class="fw-bold">🌞 Sarapan</h6>
+                <!-- ==========================
+                    SARAPAN
+                =========================== -->
+                <div class="col-md-6">
+                    <div class="p-3 rounded-4 border bg-white">
+                        <h6 class="fw-bold">🌞 Sarapan</h6>
 
-            <?php if(empty($sarapan)): ?>
-                <div class="text-muted small mt-2">Belum ada makanan.</div>
-            <?php endif; ?>
+                        <?php if(empty($sarapan)): ?>
+                            <div class="text-muted small mt-2">Belum ada makanan.</div>
+                        <?php endif; ?>
 
-            <?php foreach($sarapan as $item): ?>
-                <div class="border p-3 rounded-3 mt-2">
-                    <strong><?= $item['makanan'] ?? 'makanan' ?></strong>
-                    <span class="badge bg-dark float-end"><?= $item['kalori'] ?> kal</span>
+                        <?php foreach($sarapan as $item): ?>
+                            <div class="border p-3 rounded-3 mt-2">
+                                <strong><?= $item['makanan'] ?? 'makanan' ?></strong>
+                                <span class="badge bg-dark float-end"><?= $item['kalori'] ?> kal</span>
 
-                    <div class="mt-2 small text-muted">
-                        <i class="bi bi-clock me-1"></i><?= $item['waktu'] ?>
-                        <i class="bi bi-people ms-3 me-1"></i><?= $item['porsi'] ?> porsi
+                                <div class="mt-2 small text-muted">
+                                    <i class="bi bi-clock me-1"></i><?= $item['waktu'] ?>
+                                    <i class="bi bi-people ms-3 me-1"></i><?= $item['porsi'] ?> porsi
+                                </div>
+
+                                <a href="<?= base_url('planmakan/hapus/'.$item['idDetail'].'/'.$plan['idPlanMakan']) ?>" 
+                                class="text-danger small d-block mt-2">Hapus</a>
+                            </div>
+                        <?php endforeach; ?>
+
+                        <button class="btn btn-light w-100 mt-3"
+                            data-bs-toggle="modal" data-bs-target="#modalTambah"
+                            onclick="setKategori('sarapan')">
+                            + Tambah
+                        </button>
                     </div>
-
-                    <a href="<?= base_url('planmakan/hapus/'.$item['idDetail'].'/'.$plan['idPlanMakan']) ?>" 
-                       class="text-danger small d-block mt-2">Hapus</a>
                 </div>
-            <?php endforeach; ?>
-
-            <button class="btn btn-light w-100 mt-3"
-                data-bs-toggle="modal" data-bs-target="#modalTambah"
-                onclick="setKategori('sarapan')">
-                + Tambah
-            </button>
-        </div>
-    </div>
 
 
-    <!-- ==========================
-         MAKAN SIANG
-    =========================== -->
-    <div class="col-md-6">
-        <div class="p-3 rounded-4 border bg-white">
-            <h6 class="fw-bold">🍽️ Makan Siang</h6>
+            <!-- ==========================
+                MAKAN SIANG
+            =========================== -->
+            <div class="col-md-6">
+                <div class="p-3 rounded-4 border bg-white">
+                    <h6 class="fw-bold">🍽️ Makan Siang</h6>
 
-            <?php if(empty($siang)): ?>
-                <div class="text-muted small mt-2">Belum ada makanan.</div>
-            <?php endif; ?>
+                    <?php if(empty($siang)): ?>
+                        <div class="text-muted small mt-2">Belum ada makanan.</div>
+                    <?php endif; ?>
 
-            <?php foreach($siang as $item): ?>
-                <div class="border p-3 rounded-3 mt-2">
-                    <strong><?= $item['makanan'] ?? 'makanan' ?></strong>
-                    <span class="badge bg-dark float-end"><?= $item['kalori'] ?> kal</span>
+                    <?php foreach($siang as $item): ?>
+                        <div class="border p-3 rounded-3 mt-2">
+                            <strong><?= $item['makanan'] ?? 'makanan' ?></strong>
+                            <span class="badge bg-dark float-end"><?= $item['kalori'] ?> kal</span>
 
-                    <div class="mt-2 small text-muted">
-                        <i class="bi bi-clock me-1"></i><?= $item['waktu'] ?>
-                        <i class="bi bi-people ms-3 me-1"></i><?= $item['porsi'] ?> porsi
-                    </div>
+                            <div class="mt-2 small text-muted">
+                                <i class="bi bi-clock me-1"></i><?= $item['waktu'] ?>
+                                <i class="bi bi-people ms-3 me-1"></i><?= $item['porsi'] ?> porsi
+                            </div>
 
-                    <a href="<?= base_url('planmakan/hapus/'.$item['idDetail'].'/'.$plan['idPlanMakan']) ?>" 
-                       class="text-danger small d-block mt-2">Hapus</a>
+                            <a href="<?= base_url('planmakan/hapus/'.$item['idDetail'].'/'.$plan['idPlanMakan']) ?>" 
+                            class="text-danger small d-block mt-2">Hapus</a>
+                        </div>
+                    <?php endforeach; ?>
+
+                    <button class="btn btn-light w-100 mt-3"
+                        data-bs-toggle="modal" data-bs-target="#modalTambah"
+                        onclick="setKategori('siang')">
+                        + Tambah
+                    </button>
                 </div>
-            <?php endforeach; ?>
-
-            <button class="btn btn-light w-100 mt-3"
-                data-bs-toggle="modal" data-bs-target="#modalTambah"
-                onclick="setKategori('siang')">
-                + Tambah
-            </button>
-        </div>
-    </div>
+            </div>
 
 
-    <!-- ==========================
-         MAKAN MALAM
-    =========================== -->
-    <div class="col-md-6">
-        <div class="p-3 rounded-4 border bg-white">
-            <h6 class="fw-bold">🌜 Makan Malam</h6>
+            <!-- ==========================
+                MAKAN MALAM
+            =========================== -->
+            <div class="col-md-6">
+                <div class="p-3 rounded-4 border bg-white">
+                    <h6 class="fw-bold">🌜 Makan Malam</h6>
 
-            <?php if(empty($malam)): ?>
-                <div class="text-muted small mt-2">Belum ada makanan.</div>
-            <?php endif; ?>
+                    <?php if(empty($malam)): ?>
+                        <div class="text-muted small mt-2">Belum ada makanan.</div>
+                    <?php endif; ?>
 
-            <?php foreach($malam as $item): ?>
-                <div class="border p-3 rounded-3 mt-2">
-                    <strong><?= $item['makanan'] ?? 'makanan' ?></strong>
-                    <span class="badge bg-dark float-end"><?= $item['kalori'] ?> kal</span>
+                    <?php foreach($malam as $item): ?>
+                        <div class="border p-3 rounded-3 mt-2">
+                            <strong><?= $item['makanan'] ?? 'makanan' ?></strong>
+                            <span class="badge bg-dark float-end"><?= $item['kalori'] ?> kal</span>
 
-                    <div class="mt-2 small text-muted">
-                        <i class="bi bi-clock me-1"></i><?= $item['waktu'] ?>
-                        <i class="bi bi-people ms-3 me-1"></i><?= $item['porsi'] ?> porsi
-                    </div>
+                            <div class="mt-2 small text-muted">
+                                <i class="bi bi-clock me-1"></i><?= $item['waktu'] ?>
+                                <i class="bi bi-people ms-3 me-1"></i><?= $item['porsi'] ?> porsi
+                            </div>
 
-                    <a href="<?= base_url('planmakan/hapus/'.$item['idDetail'].'/'.$plan['idPlanMakan']) ?>" 
-                       class="text-danger small d-block mt-2">Hapus</a>
+                            <a href="<?= base_url('planmakan/hapus/'.$item['idDetail'].'/'.$plan['idPlanMakan']) ?>" 
+                            class="text-danger small d-block mt-2">Hapus</a>
+                        </div>
+                    <?php endforeach; ?>
+
+                    <button class="btn btn-light w-100 mt-3"
+                        data-bs-toggle="modal" data-bs-target="#modalTambah"
+                        onclick="setKategori('malam')">
+                        + Tambah
+                    </button>
                 </div>
-            <?php endforeach; ?>
-
-            <button class="btn btn-light w-100 mt-3"
-                data-bs-toggle="modal" data-bs-target="#modalTambah"
-                onclick="setKategori('malam')">
-                + Tambah
-            </button>
-        </div>
-    </div>
+            </div>
 
 
     <!-- ==========================

@@ -1,0 +1,11 @@
+/writable/
+/public/uploads/
+/public/assets/cache/
+/vendor/
+/.env*
+!/.env.example
+/spark
+.vscode/
+*.log
+*.tmp
+temp/
