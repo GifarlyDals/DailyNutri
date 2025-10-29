@@ -58,7 +58,6 @@
     <!-- Kalender Bulanan -->
     <div class="border rounded-4 p-3">
 
-        <!-- Header hari -->
         <div class="row text-center fw-bold text-muted mb-2">
             <div class="col">Sen</div>
             <div class="col">Sel</div>
@@ -70,7 +69,7 @@
         </div>
 
         <?php
-        $startDayOfWeek = date("N", strtotime($firstDay)); // 1 (Mon) - 7 (Sun)
+        $startDayOfWeek = date("N", strtotime($firstDay)); 
         $daysInMonth = date("t", strtotime($firstDay));
         $col = 1;
         ?>
@@ -83,7 +82,7 @@
                 <?php $col++; ?>
             <?php endfor; ?>
 
-            <!-- Render tanggal -->
+            <!-- Tanggal -->
             <?php for ($d = 1; $d <= $daysInMonth; $d++): ?>
 
                 <?php
@@ -93,7 +92,6 @@
                 $status  = $dataTgl["status"] ?? "empty";
                 $kalori  = $dataTgl["kalori"] ?? 0;
 
-                // Warna bootstrap transparan
                 $color = [
                     "full"  => "bg-success bg-opacity-50 text-white",
                     "half"  => "bg-warning bg-opacity-50 text-dark",
@@ -116,9 +114,22 @@
 
             <?php endfor; ?>
 
+            <!-- ✅ Tambahkan sel kosong setelah tanggal terakhir -->
+            <?php
+            $sisa = (7 - (($col - 1) % 7));
+            if ($sisa < 7):
+                for ($i = 0; $i < $sisa; $i++):
+            ?>
+                    <div class="col"></div>
+            <?php
+                endfor;
+            endif;
+            ?>
+
         </div>
 
     </div>
+
 
 </div>
 
