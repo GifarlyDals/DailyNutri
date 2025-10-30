@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <h1 class="fw-bold mb-3">Track Your Health Journey<br>with <span class="text-success">DailyNutri</span></h1>
+          <h1 class="fw-bold mb-3">Halo Lipa<br>with <span class="text-success">DailyNutri</span></h1>
           <p class="text-secondary mb-4">Monitor your nutrition, plan your meals, and stay hydrated with our comprehensive health tracking platform. Start your wellness journey today.</p>
           <div class="d-flex gap-3 flex-wrap">
             <a href="<?= base_url("/register") ?>" class="btn btn-success fw-semibold px-4 py-2">Mulai Gratis</a>
