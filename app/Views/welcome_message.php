@@ -28,25 +28,22 @@
       <h2 class="fw-bold mb-2">Everything You Need for Healthy Living</h2>
       <p class="text-secondary mb-5">Comprehensive tools to track and improve your daily nutrition habits</p>
 
-      <div class="row justify-content-center g-4 mb-4">
-        <div class="col-6 col-lg-12">
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4">
           <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
             <div class="fs-2 mb-3">🥗</div>
             <h3 class="h6 fw-semibold mb-2">Meal Planning</h3>
             <p class="text-secondary">Plan your weekly meals with personalized recommendations and nutritional insights.</p>
           </div>
         </div>
-        <div class="col-6 col-lg-12">
+        <div class="col-md-4">
           <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
             <div class="fs-2 mb-3">💧</div>
             <h3 class="h6 fw-semibold mb-2">Water Tracking</h3>
             <p class="text-secondary">Stay hydrated with smart reminders and daily water intake monitoring.</p>
           </div>
         </div>
-      </div>
-
-      <div class="row justify-content-center g-4 mb-4">
-        <div class="col-12 col-lg-12">
+        <div class="col-md-4">
           <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
             <div class="fs-2 mb-3">📊</div>
             <h3 class="h6 fw-semibold mb-2">Health Analytics</h3>
@@ -55,69 +52,64 @@
         </div>
       </div>
 
-      <div class="row justify-content-center g-4 mb-4">
-        <div class="col-6 col-lg-12">
+      <div class="row g-4 mt-4">
+        <div class="col-12">
           <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
             <div class="fs-2 mb-3">📚</div>
             <h3 class="h6 fw-semibold mb-2">Recipe Library</h3>
             <p class="text-secondary">Browse healthy recipes tailored to your goals and dietary needs.</p>
           </div>
         </div>
-        <div class="col-6 col-lg-12">
+
+        <div class="col-12">
           <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
             <div class="fs-2 mb-3">🔥</div>
             <h3 class="h6 fw-semibold mb-2">Calorie Counter</h3>
             <p class="text-secondary">Easily log meals and monitor daily calorie intake.</p>
           </div>
         </div>
-      </div>
 
-      <div class="row justify-content-center g-4 mb-4">
-        <div class="col-12 col-lg-12">
+        <div class="col-12">
           <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
             <div class="fs-2 mb-3">🎯</div>
             <h3 class="h6 fw-semibold mb-2">Macro Goals</h3>
             <p class="text-secondary">Set and track macronutrient targets (protein, carbs, fats) to meet your goals.</p>
           </div>
         </div>
-      </div>
 
-      <div class="row justify-content-center g-4 mb-4">
-        <div class="col-6 col-lg-12">
+        <div class="col-12">
           <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
             <div class="fs-2 mb-3">🛒</div>
             <h3 class="h6 fw-semibold mb-2">Grocery List</h3>
             <p class="text-secondary">Create shopping lists from your meal plans to simplify cooking days.</p>
           </div>
         </div>
-        <div class="col-6 col-lg-12">
+
+        <div class="col-12">
           <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
             <div class="fs-2 mb-3">📸</div>
             <h3 class="h6 fw-semibold mb-2">Progress Photos</h3>
             <p class="text-secondary">Track visual progress over time with a private photo timeline.</p>
           </div>
         </div>
-      </div>
 
-      <div class="row justify-content-center g-4 mb-4">
-        <div class="col-12 col-lg-12">
+        <div class="col-12">
           <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
             <div class="fs-2 mb-3">😴</div>
             <h3 class="h6 fw-semibold mb-2">Sleep Tracker</h3>
             <p class="text-secondary">Log sleep patterns and see how rest impacts your nutrition and energy.</p>
           </div>
         </div>
-      </div>
 
-      <div class="row justify-content-center g-4">
-        <div class="col-6 col-lg-12">
+        <div class="col-12">
           <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
             <div class="fs-2 mb-3">🏋️</div>
             <h3 class="h6 fw-semibold mb-2">Exercise Log</h3>
             <p class="text-secondary">Keep a simple log of workouts to correlate activity with nutrition.</p>
           </div>
         </div>
-        <div class="col-6 col-lg-12">
+
+        <div class="col-12">
           <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
             <div class="fs-2 mb-3">⏰</div>
             <h3 class="h6 fw-semibold mb-2">Reminders</h3>
