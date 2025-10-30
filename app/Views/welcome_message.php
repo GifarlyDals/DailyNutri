@@ -27,6 +27,7 @@
     <div class="container">
       <h2 class="fw-bold mb-2">Everything You Need for Healthy Living</h2>
       <p class="text-secondary mb-5">Comprehensive tools to track and improve your daily nutrition habits</p>
+
       <div class="row justify-content-center g-4">
         <div class="col-md-4">
           <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
@@ -50,7 +51,66 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+
+      <div class="row g-4 mt-4">
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
+        <div class="fs-2 mb-3">🥗</div>
+        <h3 class="h6 fw-semibold mb-2">Meal Planning</h3>
+        <p class="text-secondary">Plan your weekly meals with personalized recommendations and nutritional insights.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
+        <div class="fs-2 mb-3">💧</div>
+        <h3 class="h6 fw-semibold mb-2">Water Tracking</h3>
+        <p class="text-secondary">Stay hydrated with smart reminders and daily water intake monitoring.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
+        <div class="fs-2 mb-3">📊</div>
+        <h3 class="h6 fw-semibold mb-2">Health Analytics</h3>
+        <p class="text-secondary">Track your progress with detailed analytics and health insights.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
+        <div class="fs-2 mb-3">🥗</div>
+        <h3 class="h6 fw-semibold mb-2">Meal Planning</h3>
+        <p class="text-secondary">Plan your weekly meals with personalized recommendations and nutritional insights.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
+        <div class="fs-2 mb-3">💧</div>
+        <h3 class="h6 fw-semibold mb-2">Water Tracking</h3>
+        <p class="text-secondary">Stay hydrated with smart reminders and daily water intake monitoring.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
+        <div class="fs-2 mb-3">📊</div>
+        <h3 class="h6 fw-semibold mb-2">Health Analytics</h3>
+        <p class="text-secondary">Track your progress with detailed analytics and health insights.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
+        <div class="fs-2 mb-3">🥗</div>
+        <h3 class="h6 fw-semibold mb-2">Meal Planning</h3>
+        <p class="text-secondary">Plan your weekly meals with personalized recommendations and nutritional insights.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
+        <div class="fs-2 mb-3">💧</div>
+        <h3 class="h6 fw-semibold mb-2">Water Tracking</h3>
+        <p class="text-secondary">Stay hydrated with smart reminders and daily water intake monitoring.</p>
+          </div>
+        </div>
+      </section>
 
 <?php echo $this->endSection(); ?>
