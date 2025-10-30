@@ -111,15 +111,6 @@
         <p class="text-secondary">Stay hydrated with smart reminders and daily water intake monitoring.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
-        <div class="fs-2 mb-3">📊</div>
-        <h3 class="h6 fw-semibold mb-2">Health Analytics</h3>
-        <p class="text-secondary">Track your progress with detailed analytics and health insights.</p>
-          </div>
-        </div>
-      </div>
-        </div>
       </section>
 
 <?php echo $this->endSection(); ?>
